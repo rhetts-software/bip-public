@@ -1,0 +1,168 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Cabin";
+  src: url("/fonts/Cabin/Cabin-VariableFont_wdth,wght.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lusitana";
+  src: url("/fonts/Lusitana/Lusitana-Regular.ttf");
+}
+@font-face {
+  font-family: "Lusitana";
+  src: url("/fonts/Lusitana/Lusitana-Bold.ttf");
+  font-weight: bold;
+}
+:root {
+  --font-sans: "Cabin", sans-serif;
+  --font-serif: "Lusitana", serif;
+  font-size: 14px;
+}
+
+@theme {
+  --color-brand-green-50: #f1fcf2;
+  --color-brand-green-100: #dff9e4;
+  --color-brand-green-200: #c1f1cb;
+  --color-brand-green-300: #90e5a2;
+  --color-brand-green-400: #58d072;
+  --color-brand-green-500: #31b64e;
+  --color-brand-green-600: #23963c;
+  --color-brand-green-700: #1f7632;
+  --color-brand-green-800: #1d5e2c;
+  --color-brand-green-900: #1a4d26;
+  --color-brand-green-950: #092a12;
+
+  --color-brand-blue-50: #eff7ff;
+  --color-brand-blue-100: #dfeeff;
+  --color-brand-blue-200: #b7deff;
+  --color-brand-blue-300: #77c4ff;
+  --color-brand-blue-400: #2fa7ff;
+  --color-brand-blue-500: #038af4;
+  --color-brand-blue-600: #006dd0;
+  --color-brand-blue-700: #0056a9;
+  --color-brand-blue-800: #014e94;
+  --color-brand-blue-900: #073d73;
+  --color-brand-blue-950: #05274c;
+}
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body,
+main {
+  min-height: 100dvh;
+}
+
+.dark-gradient-text-full {
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-green-500),
+    var(--color-brand-blue-500)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dark-gradient-text-33 {
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-green-500),
+    oklch(69.6% 0.17 162.48)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dark-gradient-text-67 {
+  background: linear-gradient(
+    90deg,
+    oklch(77.7% 0.152 181.912),
+    oklch(71.5% 0.143 215.221)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dark-gradient-text-100 {
+  background: linear-gradient(
+    90deg,
+    oklch(71.5% 0.143 215.221),
+    var(--color-brand-blue-500)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.light-gradient-text-full {
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-green-600),
+    var(--color-brand-blue-600)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-gradient-text-33 {
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-green-600),
+    oklch(69.6% 0.17 162.48)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.light-gradient-text-67 {
+  background: linear-gradient(
+    90deg,
+    oklch(60% 0.118 184.704),
+    oklch(60.9% 0.126 221.723)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.light-gradient-text-100 {
+  background: linear-gradient(
+    90deg,
+    oklch(71.5% 0.143 215.221),
+    var(--color-brand-blue-600)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #64748b transparent;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #64748b; /* Tailwind slate-500 */
+  border-radius: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+button {
+  cursor: pointer;
+}
